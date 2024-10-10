@@ -10,24 +10,24 @@
         .bg-dark { background-color: #1e1e2f; }  /* Fondo oscuro */
         .text-neon { color: #00ffc6; }           /* Texto en verde neón suave */
         .border-neon { border-color: #00ffc6; }  /* Borde verde neón suave */
-        .focus-ring-neon:focus { outline: 2px solid #00ffc6; outline-offset: 4px; } /* Efecto foco neón */
+        .focus\:ring-2:focus { outline: 2px solid #00ffc6; outline-offset: 4px; }/* Efecto foco neón */
     </style>
 </head>
 <body class="bg-dark min-h-screen flex items-center justify-center">
     <div class="bg-gray-900 p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h1 class="text-3xl font-semibold text-neon text-center mb-8">IA-CATALOGER</h1>
+        <h1 class="text-3xl font-semibold text-neon text-center mb-8">Formulario de Música</h1>
 
-        <form>
+        <form method="POST" enctype="multipart/form-data">
             <!-- Nombre del artista -->
             <div class="mb-6">
                 <label for="artist-name" class="block text-lg text-white mb-2">Nombre del artista</label>
-                <input type="text" id="artist-name" placeholder="Ingresa el nombre del artista" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none">
+                <input type="text" id="artist-name" name="artist-name" placeholder="Ingresa el nombre del artista" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none" required>
             </div>
 
             <!-- Nombre del tema -->
             <div class="mb-6">
                 <label for="track-name" class="block text-lg text-white mb-2">Nombre del tema</label>
-                <input type="text" id="track-name" placeholder="Ingresa el nombre del tema" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none">
+                <input type="text" id="track-name" name="track-name" placeholder="Ingresa el nombre del tema" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none" required>
             </div>
 
             <!-- Tipo (Album, EP, Single) -->
@@ -36,17 +36,17 @@
                 <label class="block text-lg text-white mb-2">¿Es un álbum, EP o single?</label>
 
                 <div class="flex items-center mb-4">
-                    <input id="type-album" type="radio" name="type" value="album" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked>
+                    <input id="type-album" type="radio" name="type" value="album" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked required>
                     <label for="type-album" class="block ms-2 text-sm font-medium text-white">Álbum</label>
                 </div>
 
                 <div class="flex items-center mb-4">
-                    <input id="type-ep" type="radio" name="type" value="ep" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                    <input id="type-ep" type="radio" name="type" value="ep" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" required>
                     <label for="type-ep" class="block ms-2 text-sm font-medium text-white">EP</label>
                 </div>
 
                 <div class="flex items-center mb-4">
-                    <input id="type-single" type="radio" name="type" value="single" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                    <input id="type-single" type="radio" name="type" value="single" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" required>
                     <label for="type-single" class="block ms-2 text-sm font-medium text-white">Single</label>
                 </div>
             </fieldset>
@@ -54,19 +54,19 @@
             <!-- Descripción del tema -->
             <div class="mb-6">
                 <label for="description" class="block text-lg text-white mb-2">Descripción del tema</label>
-                <textarea id="description" placeholder="Escribe una descripción del tema" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none"></textarea>
+                <textarea id="description" name="description" placeholder="Escribe una descripción del tema" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none"></textarea>
             </div>
 
             <!-- Imagen de la portada -->
             <div class="mb-6">
                 <label for="cover-image" class="block text-lg text-white mb-2">Subir imagen para la portada</label>
-                <input type="file" id="cover-image" accept="image/*" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none">
+                <input type="file" id="cover-image" name="cover-image" accept="image/*" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none">
             </div>
 
             <!-- Subir archivo de audio -->
             <div class="mb-6">
                 <label for="audio-file" class="block text-lg text-white mb-2">Subir archivo de audio</label>
-                <input type="file" id="audio-file" accept="audio/*" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none">
+                <input type="file" id="audio-file" name="audio-file" accept="audio/*" class="w-full p-3 rounded-lg bg-gray-800 text-white focus:ring-2 focus-ring-neon border-neon focus:outline-none" required>
             </div>
 
             <!-- Botón de envío -->
