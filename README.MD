@@ -13,4 +13,14 @@ analizar toda esta informacion en conjunto con OPENAI (otra opciones : IBM Watso
 
 
 
-(((((En resumen, la estrategia consiste en conectar servicios de transcripcion y analisis musical a traves de un flujo automatizado que se dispara con la subida de una cancion. Esta aproximacion ofrece flexibilidad y un proceso optimizado sin requerir programacion avanzada.)))))
+(((((En resumen, la estrategia consiste en conectar servicios de transcripcion y analisis musical a traves de un flujo automatizado que se dispara con la subida de una cancion. Esta aproximacion ofrece flexibilidad y un proceso optimizado sin requerir programacion avanzada.
+WEB - Nombre artista, nombre tema, si es album , EP o single, descripción del tema, Portada y WAV del tema  )))))
+
+
+que necesita nuestro formulario : 
+    nombre del artista 
+    nombre del tema
+    si es album EP o single 
+    descripcion del tema 
+    una imagen para la portada 
+    y la posibilidad de subir un archivo de audio 
